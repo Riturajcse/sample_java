@@ -9,7 +9,13 @@ build:
    ci:
     - mvn clean cobertura:cobertura
     - mvn test
-
+integrations:
+   notifications:
+      - integrationName: email
+        type: email
+        recipients:
+         - revathi@shippable.com
+        on_success: always
       
 #after_success:
  #  - mvn clean cobertura:cobertura
