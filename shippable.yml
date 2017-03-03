@@ -6,14 +6,7 @@ build:
    ci:
     - mvn clean cobertura:cobertura
     - mvn test
-integrations:
-  notifications:
-    - integrationName: Myslack
-      type: slack
-      recipients:
-        - "#mybuilds"
-      on_start: always
-      on_success: always
+
       
 #after_success:
  #  - mvn clean cobertura:cobertura
